@@ -4,21 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search image</title>
+    <title>Search image HW-#11</title>
+    <link rel="stylesheet" href="../src/sass/index.scss" />
+    <script type="module" src="./index.js"></script>
     
   </head>
   <body>
-    <form class="search-form" id="search-form">
-      <input
-        type="text"
-        name="searchQuery"
-        autocomplete="off"
-        placeholder="Search images..."
-      />
-      <button type="submit">Search</button>
-    </form>
-    <div class="gallery">
+    <!-- Контейнер для пошукової панелі -->
+    <div class="container">
+      <form class="search-form" id="search-form">
+        <input
+          class="input"
+          type="search"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+          pattern=".*\S.*"
+          required
+        />
+        <button id='' type="submit" class="search-btn">""</button>
+      </form>
+    </div>
+    <!-- Контейнер для зображень -->
+    <div class="gallery" id="gallery">
       <!-- Карточки зображень -->
     </div>
+    <div class="button-container">
+      <button type="button" class="load-more visually-hidden" role="button"
+        >Load more</button
+      >
+    </div>
+      
   </body>
 </html>
