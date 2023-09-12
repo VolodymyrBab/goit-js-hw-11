@@ -1,0 +1,103 @@
+.logo-box{
+  width: 100px;
+  height: 28px;
+}
+.header{background: #FFFFFF;
+  border: 1.5px solid #111111;
+  border-radius: 0px 0px 8px 8px;}
+
+.icon-burger {    
+    stroke: currentColor;    
+  }
+
+.nav {
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+.nav-items{
+display: flex;
+justify-content: center;
+align-items: center
+}
+
+
+
+.checkbox{
+  padding-top: 5px;
+  margin-right: 14px;
+}
+
+.lb1 {
+  margin: 0em;
+}
+
+#highload1 {
+  display: none;
+}
+
+#highload1+.lb1,
+#highload1+.lb1::before,
+#highload1+.lb1::after {
+  transition: all .3s;
+}
+
+#highload1+.lb1 {
+  display: inline-block;
+  position: relative;
+  
+  width: 40px;
+  height: 22px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#highload1+.lb1::before {
+  display: block;
+  content: attr(data-offlabel);
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+#highload1+.lb1::after {
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+
+#highload1:checked+.lb1::before {
+  content: attr(data-onlabel);
+  left: 16px;
+  right: auto;
+  color: #fff;
+}
+
+#highload1:checked+.lb1::after {
+  left: 19px;
+  background-color: #f7f7f7;
+  
+}
+
+#highload1+.lb1 {
+  
+  background: linear-gradient(180deg, #4F2EE8 0%, #686868 100%);
+}
+
+#highload1:checked+.lb1 {
+background: linear-gradient(180deg, #4F2EE8 0%, #DCDCDC 100%);
+}
+
+#highload1:checked+.lb1::before {
+  color: #fff;
+}
